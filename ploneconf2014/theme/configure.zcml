@@ -26,4 +26,13 @@
       layer=".interfaces.ICustomTheme"
       />
 
+<!-- -*- extra stuff goes here -*- -->
+  
+  <browser:page
+    name="hello"
+    for="*"
+    class=".hello.HelloWorld"
+    permission="zope2.Public"
+    />
+
 </configure>
