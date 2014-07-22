@@ -26,7 +26,7 @@
       layer=".interfaces.ICustomTheme"
       />
 
-<!-- -*- extra stuff goes here -*- -->
+
   
   <browser:page
     name="hello"
@@ -34,5 +34,10 @@
     class=".hello.HelloWorld"
     permission="zope2.Public"
     />
+
+<!-- -*- extra stuff goes here -*- -->
+
+  <include package=".browser" />
+  
 
 </configure>

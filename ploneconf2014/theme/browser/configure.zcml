@@ -1,0 +1,42 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ploneconf2014.theme">
+    <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="*"
+      name="helloplone_view"
+      class=".helloploneview.HelloPloneView"
+      template="helloploneview.pt"
+      allowed_interface=".helloploneview.IHelloPloneView"
+      permission="zope.Public"
+      />
+
+  <browser:viewlet
+    name="ploneconf2014.theme.helloworld"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+    class=".viewlets.MyHelloWorldViewlet"
+    layer="..interfaces.ICustomTheme"
+    permission="zope2.View"
+    />
+
+  <browser:resourceDirectory
+      name="ploneconf2014.theme.images"
+      directory="images"
+      layer="..interfaces.ICustomTheme"
+      />
+
+  <browser:resourceDirectory
+      name="ploneconf2014.theme.stylesheets"
+      directory="stylesheets"
+      layer="..interfaces.ICustomTheme"
+      />
+
+  <browser:resourceDirectory
+      name="ploneconf2014.theme.javascripts"
+      directory="javascripts"
+      layer="..interfaces.ICustomTheme"
+      />
+
+</configure>
